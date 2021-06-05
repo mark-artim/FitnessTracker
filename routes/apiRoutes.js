@@ -4,7 +4,7 @@ const Workout = require("../models/workout");
 module.exports = function(app) {
     app.get("/api/workouts", (req, res) => {
         db.Workout.find({})
-        .sort({ _id: -1 })
+        .sort({ _id: 1 })
           .then(dbWorkouts => {
             res.json(dbWorkouts);
           })
@@ -24,7 +24,7 @@ module.exports = function(app) {
         });
 
     app.put("/api/workouts/:id", function(req, res) {
-        var upd = db.Workout.updateOne({ _id: req.params.id }, { $push: {exercise: req.body}});
+        var upd = db.Workout.updateOne({ _id: req.params.id }, { $push: {exercises: req.body}});
         upd.exec(function (err, workoutData) {
             if (err) {
                 console.log("There was an error: ",err);
@@ -34,6 +34,19 @@ module.exports = function(app) {
             return res.json(workoutData);
         });
     });
+
+    // FINISH THIS - GET BY RANGE
+    app.get("/api/workouts/range", (req, res) => {
+        db.Workout.find({})
+        .sort({ _id: -1 })
+          .then(dbWorkouts => {
+              console.log('>>>>>>>>dbWorkouts: ',dbWorkouts)
+            res.json(dbWorkouts);
+          })
+          .catch(err => {
+            res.json(err);
+          });
+          });
 }
 
     

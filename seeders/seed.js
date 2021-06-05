@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
 const db = require('../models');
 
-mongoose.connect('mongodb://localhost/workout', {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
+// mongoose.connect('mongodb://localhost/workout', {
+//   useNewUrlParser: true,
+//   useFindAndModify: false,
+//   useUnifiedTopology: true,
+// });
+
+mongoose.connect("mongodb+srv://appadmin:password_12345@cluster0.bf1i0.mongodb.net/fitnessTrackerDb?retryWrites=true&w=majority", {
+  useNewUrlParser: true
 });
 
 const workoutSeed = [
