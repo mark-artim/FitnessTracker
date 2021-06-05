@@ -22,9 +22,19 @@ require("./routes/htmlRoutes.js")(app);
 //   useNewUrlParser: true
 // });
 
-mongoose.connect("mongodb+srv://appadmin:password_12345@cluster0.bf1i0.mongodb.net/fitnessTrackerDb?retryWrites=true&w=majority", {
-  useNewUrlParser: true
-});
+// mongoose.connect("mongodb+srv://appadmin:password_12345@cluster0.bf1i0.mongodb.net/fitnessTrackerDb?retryWrites=true&w=majority", {
+//   useNewUrlParser: true
+// });
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb+srv://appadmin:password_12345@cluster0.bf1i0.mongodb.net/fitnessTrackerDb?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 app.listen(PORT, function() {
   console.log(`Now listening on port: ${PORT}`);
