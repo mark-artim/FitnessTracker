@@ -35,7 +35,7 @@ This application is straightforward. From the homepage you are able to start a n
 
 <br>
 
-## The live site can be reached by clicking this link: [TechBlog](https://mrafitnesstracker.herokuapp.com)
+## The live site can be reached by clicking this link: [FitnessTracker](https://mrafitnesstracker.herokuapp.com)
 
 
 ## Credits
