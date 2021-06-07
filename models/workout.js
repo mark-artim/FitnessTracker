@@ -31,12 +31,14 @@ const WorkoutSchema = new Schema({
 //     //     return sum;
 //     })
 
-    WorkoutSchema.virtual('totalDuration').get(function() {
+// FROM WORKOUT.JS: const tallied = exercises.reduce((acc, curr) => {
+
+    WorkoutSchema.virtual('totalDuration')
+        .get(function() {
         return this.exercises.reduce((total, { duration }) => {
-    
             return total + duration
-        }, 0)
-    })
+        },0)
+    });
     
     // let aggregate = WorkoutSchema.aggregate([
     //     {
