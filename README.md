@@ -2,12 +2,12 @@
 Mongo DB Workout Tracker
 
 ## Description
-Thius application allows an individual to view create and track daily workouts. You are able to log multiple exercises in a workout on a given day. You are also able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, you are able to track the distance traveled.
+Thius application allows an individual to view create and track daily workouts. You are able to log multiple exercises in a workout on a given day. You are also able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, you are able to track the distance traveled. This app is hosted on Heroku.
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Sample of the Tech Blog application:<br><br>
-![Tech BLog Sample Page](AppScreenshot.jpg)
+![Fitness Tracker Sample Page](AppScreenshot.jpg)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -22,14 +22,16 @@ After cloning the repository there are many dependencies so be sure to navigate 
 ```npm run seed```<br>
 ```npm start or nodemon server.js```
 
-Github repsitory [TechBlog](https://github.com/mark-artim/FitnessTracker)
+Github repsitory [FitnessTracker](https://github.com/mark-artim/FitnessTracker)
 
 ## Usage
 
-This application is straightforward. You may view posts and comments without being logged in and once registered and loged in you can additionally:
-- Add new posts.
-- Edit your own posts.
-- Add comments to other people's posts.
+This application is straightforward. From the homepage you are able to start a new workout and add multiple execises to that workout.
+- You can start a new workout and can track multiple workouts per day.
+- You can add as many exercises as you like to a workout.
+- You can continue a workout already started if you need to.
+- You can track cardio or resistance exercises nad will be prompted for inormation appropriate for each type.
+- Once you complete a workout you are able to view statistics on a dashboard.
 
 <br>
 
@@ -37,14 +39,14 @@ This application is straightforward. You may view posts and comments without bei
 
 
 ## Credits
-Mim Armand was instrumental in educating me on the technology required for this application as well as Chris Martinez and Jay Yousef for helping me debug issues prior to pulling my hair out.
+Mim Armand was instrumental in educating me on the technology required for this application as well as Chris Martinez and Jay Yousef for helping me debug issues.
 
 ## License
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## How to Contribute
-If you feel web pages are a passing fad and terminal applications are making a comeback then feel free to fork and make pull requests.
+Feel free to fork and make pull requests.
 
 ## Tests
 **There are no unit or other tests for this project**<BR>
